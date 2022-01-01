@@ -1,9 +1,13 @@
 # Pleco to Anki sync
 
 To use:
-- export flashcards from Pleco. e.g. to ~/Desktop/flash.txt (see screenshot for how to configure the export options)
-- build js: `npm run build`
-- run js: `node index.js ~/Desktop/flash.txt`
+- Install the AnkiConnect add-on for Anki (one-time)
+- Install and set up nodejs (one-time)
+- Export flashcards from Pleco. 
+  - See [screenshot](./export_config.PNG) for how to configure the export options
+  - Transfer the file from your phone to your computer. e.g. to ~/Desktop/flash.txt 
+- Build js: `npm run build`
+- Run js: `node index.js ~/Desktop/flash.txt`
 
 The code expects the following to exist in Anki:
 - A deck called "Max Infinity"
