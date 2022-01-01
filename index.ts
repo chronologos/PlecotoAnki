@@ -4,14 +4,6 @@ import { readFileSync } from "fs";
 import { config } from "./config";
 import { NewNote, AnkiConnectResult } from "./types";
 
-// use:
-// export flashcards from Pleco. e.g. to ~/Desktop/flash.txt
-// build: `npm run build`
-// run: `node index.js ~/Desktop/flash.txt`
-
-// note type: Chinese
-// fields: english, chinese, pinyin, extra
-
 export const noteExists = async (query: string): Promise<boolean> => {
   const res = await invokeAnkiConnect(
     config.ANKI_CONNECT_FINDNOTES,
