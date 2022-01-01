@@ -3,10 +3,10 @@
   "compilerOptions": {
     "target": "es6",
     "module": "commonjs",
-    // "moduleResolution": "node",
+    "moduleResolution": "node",
     "declaration": true,
     "strict": true,
-    "noImplicitAny": true /* Raise error on expressions and declarations with an implied 'any' type. */,
+    "noImplicitAny": false /* Raise error on expressions and declarations with an implied 'any' type. */,
     "strictNullChecks": true /* Enable strict null checks. */,
     "strictFunctionTypes": true /* Enable strict checking of function types. */,
     "noUnusedLocals": true /* Report errors on unused locals. */,
@@ -20,9 +20,9 @@
     "experimentalDecorators": true,
     "sourceMap": true,
     "rootDir": ".",
-    "outDir": "./dist/tsc/",
-    "types": ["jest"],
+    "outDir": "./dist",
+    "types": ["jest", "node"],
     "lib": ["ES2019", "DOM"]
   },
-  "include": ["src/**/*.ts", "test/**/*.ts"]
+  "include": ["src/*.ts", "test/*.ts"]
 }

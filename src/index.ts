@@ -45,7 +45,14 @@ export const invokeAnkiConnect = (
         resp.setEncoding("utf8");
         const headers = resp.headers;
         console.log(data.length);
-        const expectedLength = parseInt(headers["content-length"]);
+        if (headers["content-length"] == null) {
+          reject("content-length invalid");
+        }
+        const contentLength: string | undefined = headers["content-length"];
+        if (contentLength === undefined) {
+          reject("bad content-length");
+        } 
+        const expectedLength = parseInt(contentLength!);
         let str = "";
         let len = 0;
         resp.on("data", function (chunk: string) {

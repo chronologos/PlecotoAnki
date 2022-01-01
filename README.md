@@ -7,7 +7,7 @@ To use:
   - See [screenshot](./export_config.PNG) for how to configure the export options
   - Transfer the file from your phone to your computer. e.g. to ~/Desktop/flash.txt 
 - Build js: `npm run build`
-- Run js: `node index.js ~/Desktop/flash.txt`
+- Run js: `npm run run -- ~/Desktop/flash.txt`
 
 The code expects the following to exist in Anki:
 - A deck called "Max Infinity"
