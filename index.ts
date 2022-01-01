@@ -70,30 +70,7 @@ export const invokeAnkiConnect = (
     );
     req.write(data);
     req.end();
-    // xhr.addEventListener("load", () => {
-    //   try {
-    //     const response = JSON.parse(xhr.responseText);
-    //     if (Object.getOwnPropertyNames(response).length !== 2) {
-    //       throw Error("response has an unexpected number of fields");
-    //     }
-    //     if (!Object.prototype.hasOwnProperty.call(response, "error")) {
-    //       throw Error("response is missing required error field");
-    //     }
-    //     if (!Object.prototype.hasOwnProperty.call(response, "result")) {
-    //       throw Error("response is missing required result field");
-    //     }
-    //     if (response.error) {
-    //       throw response.error;
-    //     }
-    //     resolve(response.result);
-    //   } catch (e) {
-    //     reject(e);
-    //   }
   });
-
-  // xhr.open("POST", "http://localhost:8765");
-  // console.log(JSON.stringify({ action, version, params }));
-  // xhr.send(JSON.stringify({ action, version, params }));
 };
 
 const lineToAnkiConnectNote = (line: string[]): NewNote => {
